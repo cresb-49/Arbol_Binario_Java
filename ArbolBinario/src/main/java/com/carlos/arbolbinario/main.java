@@ -19,7 +19,7 @@ public class main {
         arbol.agregarNodo(new NodoArbol(88));
         arbol.agregarNodo(new NodoArbol(83));
         arbol.agregarNodo(new NodoArbol(2));
-        arbol.agregarNodo(new NodoArbol(104));
+        arbol.agregarNodo(new NodoArbol(1048));
         
         
         arbol.recorridoInOrden();
