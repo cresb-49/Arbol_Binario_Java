@@ -47,8 +47,6 @@ public class NodoArbol {
     public void agregarNodo(NodoArbol nodo){
         if(this.contenido==null){
             this.contenido=nodo.getContenido();
-            this.derecha=nodo.getDerecha();
-            this.izquierda=nodo.getIzquierda();
         }else{
             if(nodo.getContenido()>this.contenido){
                 if(this.derecha==null){
@@ -96,6 +94,23 @@ public class NodoArbol {
         System.out.print(" "+this.contenido+" ");
     }
     
+    public NodoArbol buscarNodo(Integer contenido){
+        NodoArbol tmp=null;
+        if(this.contenido==contenido){
+            tmp =this;
+        }else{
+            if(contenido>this.contenido){
+                if(this.derecha!=null){
+                    tmp = this.derecha.buscarNodo(contenido);
+                }
+            }else{
+                if(this.izquierda!=null){
+                    tmp = this.izquierda.buscarNodo(contenido);
+                }
+            }
+        }
+        return tmp;
+    }
     
     @Override
     public String toString() {
